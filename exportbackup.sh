@@ -1,6 +1,6 @@
 #!/bin/sh
 
-admin_key="insert your privat key here"
+#admin_key="insert your privat key here"
 
 #Start export
 #export_date=$(date +"%Y-%m-%d")
