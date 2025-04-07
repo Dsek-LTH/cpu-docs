@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #admin_key="insert your privat key here"
 

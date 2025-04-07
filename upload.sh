@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Date in format Day-Month-Year
 date=$(date +"%Y-%m-%d %T")
