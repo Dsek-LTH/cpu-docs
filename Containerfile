@@ -1,6 +1,6 @@
 FROM docker.io/alpine
 
-RUN apk add git openssh; adduser -Dh /home/user -G root user
+RUN apk add curl git openssh jq; adduser -Dh /home/user -G root user
 WORKDIR /home/user
 COPY . .
 RUN mkdir .ssh; \
@@ -13,6 +13,5 @@ RUN chown user -R .
 
 USER user
 VOLUME /home/user/.ssh/gitkey
-ENTRYPOINT ["/bin/sh", "-c"]
-CMD ["sh"]
+CMD ["./exportbackup.sh"]
 

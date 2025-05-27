@@ -4,7 +4,7 @@
 
 #Start export
 #export_date=$(date +"%Y-%m-%d")
-folder='run_info/'
+folder='/tmp/'
 download='cpu_backup.zip'
 export_init="${folder}export_init.json"
 file_op_info="${folder}file_op_info.json"
@@ -49,7 +49,7 @@ curl -o $redirect_link -X POST https://cpu.dsek.se/api/fileOperations.redirect \
   --header "Authorization: Bearer $admin_key" \
   --data "{\"id\": \"$op_id\"}"
 
-download_url=$(grep -oP '(?<=href=")https://cpu.dsek.se/api/files.get[^"]*' $redirect_link)
+download_url=$(grep -o 'https:.*')
 
 if [[ -z "$download_url" ]]; then
   echo "No export URL generated"
